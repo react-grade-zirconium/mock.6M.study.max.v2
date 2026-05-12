@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고1 6월 모의고사 6과목 훈련</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">고1 6월 전국연합 수준</p>
+        <h1>6과목 실전 모의고사</h1>
+        <p class="hero__copy">
+          전년도 문제를 그대로 복제하지 않고 소재·수치·선지를 변형한 원문항으로,
+          과목별 문항 수와 제한 시간을 실전처럼 맞춰 연습합니다.
+        </p>
+      </div>
+      <div class="timer-card" aria-live="polite">
+        <span id="activeSubject">과목 선택 전</span>
+        <strong id="timer">00:00</strong>
+        <small id="timerHint">시작을 누르면 해당 과목 시간이 흐릅니다.</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel controls" aria-label="모의고사 제어">
+        <label>
+          과목
+          <select id="subjectSelect"></select>
+        </label>
+        <button id="startBtn">시작 / 재시작</button>
+        <button id="pauseBtn" class="secondary">일시정지</button>
+        <button id="submitBtn" class="accent">채점하기</button>
+      </section>
+
+      <section class="overview" id="overview"></section>
+
+      <section class="panel exam-info">
+        <h2 id="subjectTitle">과목을 선택하세요</h2>
+        <p id="subjectMeta"></p>
+        <ul>
+          <li>실제 6월 모의고사 흐름에 맞춰 한 과목씩 풀이합니다.</li>
+          <li>문항은 전년도 기출의 형식과 난도를 참고하되, 지문·조건·정답을 새로 구성했습니다.</li>
+          <li>타이머가 0이 되면 자동으로 채점 화면이 열립니다.</li>
+        </ul>
+      </section>
+
+      <form id="examForm" class="questions"></form>
+
+      <section id="result" class="panel result" hidden></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
