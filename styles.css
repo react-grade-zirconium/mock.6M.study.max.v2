@@ -109,8 +109,133 @@ button.accent { background: var(--accent); }
 .expired { color: var(--danger); }
 
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; }
-  .controls { align-items: stretch; }
-  select, button, label { width: 100%; }
-  .review-list { columns: 1; }
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 28px 16px 24px;
+  }
+
+  .hero__copy {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .timer-card {
+    width: 100%;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .timer-card strong {
+    margin: 6px 0;
+    font-size: clamp(2.2rem, 14vw, 3rem);
+  }
+
+  main {
+    padding: 16px 12px 40px;
+  }
+
+  .panel,
+  .subject-card,
+  .question-card {
+    border-radius: 16px;
+  }
+
+  .controls {
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  select,
+  button,
+  label {
+    width: 100%;
+    min-width: 0;
+  }
+
+  select,
+  button {
+    min-height: 48px;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .subject-card {
+    padding: 14px;
+  }
+
+  .exam-info {
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+
+  .exam-info ul {
+    padding-left: 20px;
+  }
+
+  .questions {
+    gap: 12px;
+  }
+
+  .question-card {
+    padding: 16px;
+  }
+
+  .question-card h3 {
+    line-height: 1.45;
+  }
+
+  .passage {
+    padding: 12px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .choices {
+    gap: 8px;
+  }
+
+  .choice {
+    padding: 12px 10px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .result {
+    margin-top: 18px;
+    padding: 18px;
+  }
+
+  .review-list {
+    columns: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .eyebrow {
+    font-size: 0.86rem;
+  }
+
+  .hero__copy,
+  .exam-info p,
+  .exam-info li,
+  .choice,
+  .passage {
+    font-size: 0.95rem;
+  }
 }
